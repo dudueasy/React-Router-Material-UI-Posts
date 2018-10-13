@@ -1,5 +1,5 @@
 import React, {Fragment, Component} from 'react';
-import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Switch, Route} from 'react-router-dom'
 import Home from './Home'
 import Layout from './Layout'
 
@@ -22,7 +22,7 @@ export default class extends Component {
     const {writersData} = this.state
 
     return (
-      <BrowserRouter writersData={writersData}>
+      <HashRouter writersData={writersData}>
         <Fragment>
           <Layout writersData={writersData}>
             <Switch>
@@ -38,7 +38,7 @@ export default class extends Component {
             </Switch>
           </Layout>
         </Fragment>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
